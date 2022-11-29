@@ -1,6 +1,5 @@
 class Item
-  attr_reader :name, :color, :price, :shelf_life, :stock
-  attr_writer :name, :color, :price, :shelf_life, :stock
+  attr_accessor :name, :color, :price, :shelf_life, :stock
   def initialize(input_options)
     @name = input_options[:name]
     @color = input_options[:color]
@@ -13,6 +12,8 @@ class Item
   end
 end
 item1 = Item.new(name: "chocolates", color: "brown", price: 5, shelf_life: "3 months", stock: 1000)
+item2 = Item.new(name: "Star Wars Lego Set", color: "Many", price: 80, shelf_life: "N/A", stock: "150 units")
 p item1.name
 p item1.color
 p item1.price
+p item2.item_info
