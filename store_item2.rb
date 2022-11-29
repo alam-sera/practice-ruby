@@ -1,31 +1,18 @@
 class Item
-  def initialize(name, color, price, shelf_life, stock)
-    @name = name
-    @color = color
-    @price = price
-    @shelf_life = shelf_life
-    @stock = stock
+  attr_reader :name, :color, :price, :shelf_life, :stock
+  attr_writer :name, :color, :price, :shelf_life, :stock
+  def initialize(input_options)
+    @name = input_options[:name]
+    @color = input_options[:color]
+    @price = input_options[:price]
+    @shelf_life = input_options[:shelf_life]
+    @stock = input_options[:stock]
   end
-
-  def name
-    @name
-  end 
-
-  def color
-    @color
-  end
-
-  def price
-    @price
-  end 
-
-  def shelf_life
-    @shelf_life
-  end 
-
   def item_info
     p "#{name} is worth $#{price} and can be stored for #{shelf_life}"
   end
 end
-item1 = Item.new("chocolates", "brown", 5, "3 months", 1000)
-p item1.item_info
+item1 = Item.new(name: "chocolates", color: "brown", price: 5, shelf_life: "3 months", stock: 1000)
+p item1.name
+p item1.color
+p item1.price
