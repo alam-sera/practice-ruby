@@ -14,8 +14,8 @@ class Vehicle
 
   def turn(new_direction)
     @direction = new_direction
-  end
-end 
+  end 
+
 class Car < Vehicle
   def honk_horn
     puts "Beeeeeeep!"
