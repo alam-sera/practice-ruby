@@ -3,14 +3,18 @@ require_relative "./reportable.rb"
 require_relative "./manager.rb"
 require_relative "./intern.rb"
 
-
-
-
-
-employee1 = Employee.new({:first_name => "Majora", :last_name => "Carter", :salary => 80000, :active => true})
+employee1 = Employee.new({
+  first_name: "Majora",
+  last_name: "Carter",
+  salary: 80000, 
+  active: true})
 employee1.print_info
 
-employee2 = Employee.new(first_name: "Danilo", last_name: "Campos", salary: 100000, active: false)
+employee2 = Employee.new(
+  first_name: "Danilo",
+  last_name: "Campos", 
+  salary: 100000, 
+  active: false)
 employee2.print_info
 
 employee2.first_name=("Jason")
